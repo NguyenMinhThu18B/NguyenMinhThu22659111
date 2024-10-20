@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        table {
+            width: 60%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid black;
+            text-align: center;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+            color: #ff00ff;
+        }
+        
+        h2 {
+            text-align: center;
+            color: #ff00ff;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>DANH SÁCH SINH VIÊN</h2>
+    <table>
+        <tr>
+            <th>MSSV</th>
+            <th>Tên</th>
+            <th>Lớp</th>
+        </tr>
+        <tr>
+            <td id="msv">001</td>
+            <td id="ten">Hoang Minh</td>
+            <td id="lop">5A</td>
+        </tr>
+    </table>
+
+    <script>
+        // Hàm nhập thông tin sinh viên bằng prompt và cập nhật bảng
+        function nhapThongTinSV() {
+            // Nhập thông tin từ người dùng
+            var mssv = prompt("Nhập mã số SV:");
+            var ten = prompt("Nhập tên sinh viên:");
+            var lop = prompt("Nhập lớp:");
+
+            // Cập nhật thông tin vào bảng
+            document.getElementById("msv").innerHTML = mssv;
+            document.getElementById("ten").innerHTML = ten;
+            document.getElementById("lop").innerHTML = lop;
+        }
+
+        // Gọi hàm nhập thông tin ngay khi trang được tải
+        nhapThongTinSV();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập</title>
+</head>
+
+<body>
+    <table border="1" cellpadding="5" cellspacing="0">
+        <tr>
+            <th colspan="2" style="text-align:center; color:red;">THÔNG TIN ĐĂNG NHẬP</th>
+        </tr>
+        <tr>
+            <td>UserName:</td>
+            <td id="userName"></td>
+        </tr>
+        <tr>
+            <td>PassWord:</td>
+            <td id="passWord"></td>
+        </tr>
+    </table>
+
+    <script>
+        window.onload = function() {
+            var hoTen = localStorage.getItem('hoTen');
+            var matKhau = localStorage.getItem('matKhau');
+
+            if (hoTen && matKhau) {
+                document.getElementById('userName').innerText = hoTen;
+                document.getElementById('passWord').innerText = matKhau;
+            } else {
+                alert('Không có thông tin đăng nhập. Vui lòng đăng ký trước.');
+                window.location.href = "Bai2adagki.html";
+            }
+        }
+    </script>
+</body>
+
+</html>

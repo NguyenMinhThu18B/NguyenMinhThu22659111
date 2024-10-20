@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chọn Định Dạng</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        .form-container {
+            margin: 50px auto;
+            width: 300px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>FORM ĐỊNH DẠNG</h2>
+        <form>
+            <label><input type="checkbox" name="format" value="Background"> Background</label><br>
+            <label><input type="checkbox" name="format" value="Font"> Font</label><br><br>
+            <select id="color" name="color">
+                <option value="red">Đỏ</option>
+                <option value="blue">Xanh</option>
+                <option value="green">Xanh lá</option>
+            </select><br><br>
+            <input type="button" value="OK" onclick="applyFormat()">
+            <input type="button" value="Cancel" onclick="resetFormat()">
+        </form>
+    </div>
+
+    <script>
+        function applyFormat() {
+            var checkboxes = document.getElementsByName('format');
+            var color = document.getElementById('color').value;
+
+            for (var i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked) {
+                    if (checkboxes[i].value === "Background") {
+                        document.body.style.backgroundColor = color;
+                    }
+                    if (checkboxes[i].value === "Font") {
+                        document.body.style.color = color;
+                    }
+                }
+            }
+        }
+
+        function resetFormat() {
+            document.body.style.backgroundColor = '';
+            document.body.style.color = '';
+        }
+    </script>
+</body>
+
+</html>

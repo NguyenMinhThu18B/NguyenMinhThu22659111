@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phép Toán Cơ Bản</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        .form-container {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        
+        input {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        
+        button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+        .output {
+            margin-top: 20px;
+        }
+        
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Thực Hiện Phép Toán</h2>
+        <label for="so1">Số thứ nhất:</label>
+        <input type="text" id="so1" placeholder="Nhập số thứ nhất">
+
+        <label for="so2">Số thứ hai:</label>
+        <input type="text" id="so2" placeholder="Nhập số thứ hai">
+
+        <button onclick="thucHienPhepToan()">Tính Toán</button>
+
+        <div class="output" id="output"></div>
+    </div>
+
+    <script>
+        function thucHienPhepToan() {
+            // Lấy giá trị từ các trường input
+            var so1 = document.getElementById('so1').value;
+            var so2 = document.getElementById('so2').value;
+
+            // Kiểm tra giá trị nhập vào có phải là số hay không
+            if (isNaN(so1) || isNaN(so2) || so1 === "" || so2 === "") {
+                document.getElementById('output').innerHTML = '<p class="error">Vui lòng nhập giá trị hợp lệ là số!</p>';
+                return;
+            }
+
+            // Chuyển giá trị input sang số
+            so1 = parseFloat(so1);
+            so2 = parseFloat(so2);
+
+            // Thực hiện các phép toán
+            var tong = so1 + so2;
+            var hieu = so1 - so2;
+            var tich = so1 * so2;
+            var thuong = so2 !== 0 ? (so1 / so2).toFixed(2) : 'Không thể chia cho 0';
+            var chiaDu = so2 !== 0 ? so1 % so2 : 'Không thể chia cho 0';
+
+            // Hiển thị kết quả
+            document.getElementById('output').innerHTML = `
+                <h3>Kết Quả</h3>
+                <p>Cộng: ${so1} + ${so2} = ${tong}</p>
+                <p>Trừ: ${so1} - ${so2} = ${hieu}</p>
+                <p>Nhân: ${so1} * ${so2} = ${tich}</p>
+                <p>Chia: ${so1} / ${so2} = ${thuong}</p>
+                <p>Chia lấy dư: ${so1} % ${so2} = ${chiaDu}</p>
+            `;
+        }
+    </script>
+</body>
+
+</html>

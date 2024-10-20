@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký</title>
+</head>
+
+<body>
+    <form id="dangkyForm">
+        <table border="1" cellpadding="5" cellspacing="0">
+            <tr>
+                <th colspan="2" style="text-align:center; color:red;">THÔNG TIN ĐĂNG KÝ</th>
+            </tr>
+            <tr>
+                <td>Họ tên:</td>
+                <td><input type="text" id="hoTen" required></td>
+            </tr>
+            <tr>
+                <td>Mật khẩu:</td>
+                <td><input type="password" id="matKhau" required></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:center;">
+                    <button type="button" onclick="chuyenThongTin()">Nhập</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function chuyenThongTin() {
+            var hoTen = document.getElementById('hoTen').value;
+            var matKhau = document.getElementById('matKhau').value;
+
+            if (hoTen && matKhau) {
+                localStorage.setItem('hoTen', hoTen);
+                localStorage.setItem('matKhau', matKhau);
+                window.location.href = "Bai2adagnhap.html";
+            } else {
+                alert('Vui lòng nhập đầy đủ thông tin!');
+            }
+        }
+    </script>
+</body>
+
+</html>

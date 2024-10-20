@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chọn Loại Cafe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        .form-container {
+            margin: 50px auto;
+            width: 300px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Chọn loại cafe:</h2>
+        <form>
+            <label><input type="checkbox" name="cafe" value="Trung Nguyen"> Trung Nguyen</label><br>
+            <label><input type="checkbox" name="cafe" value="Me Kong"> Me Kong</label><br>
+            <label><input type="checkbox" name="cafe" value="New Life"> New Life</label><br>
+            <label><input type="checkbox" name="cafe" value="Ocean Blue"> Ocean Blue</label><br><br>
+            <input type="button" value="Chọn" onclick="showSelection()">
+        </form>
+        <p id="output"></p>
+    </div>
+
+    <script>
+        function showSelection() {
+            var checkboxes = document.getElementsByName('cafe');
+            var result = [];
+            for (var i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked) {
+                    result.push(checkboxes[i].value);
+                }
+            }
+            document.getElementById('output').innerHTML = "Bạn đã chọn: " + result.join(", ");
+        }
+    </script>
+</body>
+
+</html>
