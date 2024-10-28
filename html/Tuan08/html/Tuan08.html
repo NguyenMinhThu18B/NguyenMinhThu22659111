@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <style>
+        .error {
+            color: red;
+            font-size: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-4">
+        <div class="col-12">
+            <img src="../img/bien.png" style="width: 100%;" alt="">
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mt-3">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a href="#" class="nav-link">Trang Chủ</a></li>
+            <li class="nav-item"><a href="#" id="btnRegister" class="nav-link">Đăng ký</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Trợ giúp</a></li>
+        </ul>
+    </nav>
+    <table class="table table-borderes table-striped mt-3" id="studentTable">
+        <thead class="thead-dark">
+            <tr>
+                <th>STT</th>
+                <th>Mã học viên</th>
+                <th>Họ tên</th>
+                <th>Email</th>
+                <th>Tiền dịch vụ</th>
+                <th>Tên đồ dùng</th>
+                <th>Tổng tiền</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>123456789</td>
+                <td>Nguyễn Minh Thư</td>
+                <td>minhthu@iuh.edu.vn</td>
+                <td>30000</td>
+                <td>10000</td>
+                <td>40000</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="registrationModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registrationModalLabel">
+                        THÔNG TIN THANH TOÁN
+                    </h5>
+                    <button tyle="button" class="clode" data-dismiss="modal" aria-label="Close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="registrationForm">
+                        <div class="form-group">
+                            <label for="studentId">Mã học viên</label>
+                            <input type="text" class="form-control" id="studentId" placeholder="123456789">
+                            <span class="error" id="studentIdError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="fullName">Họ tên</label>
+                            <input type="text" class="form-control" id="fullName" placeholder="Nguyen Minh Thu">
+                            <span class="error" id="fullNameError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="minhthu@iuh.edu.vn">
+                            <span class="error" id="emailError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="serviceCost">Dịch vụ</label>
+                            <select class="form-control" id="serviceCost">
+                                <option value="20000">Bơi</option>
+                                <option value="30000">Trượt ván</option>
+                                <option value="50000">Moto nước</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtDV">Giá tiền</label>
+                            <input type="text" name="txtDV" id="txtDV" class="form-control" disabled>
+                        </div>
+                        <label> Đồ dùng</label>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input equipment" value="20000">Áo quần bơi <br>
+                            <input type="checkbox" class="form-check-input equipment" value="50000">Phao <br>
+                            <input type="checkbox" class="form-check-input equipment" value="70000">Kính bơi <br>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtDD">Tiền đồ dùng</label>
+                            <input type="text" name="txtDD" id="txtDD" class="form-control" value="0" disabled>
+                        </div>
+                        <div class="form-droup mt-3">
+                            <label for="totalCost"> Tổng tiền</label>
+                            <input type="text" class="form-control" id="totalCost" disabled>
+                            <button type="button" class="btn btn-success" id="btnSubmit">Thanh toán</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                            <h5 style="margin-left: 300px;">Trang thanh toán</h5>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $("#btnRegister").click(function() {
+                $("#myModal").modal("show");
+            });
+
+            function validateForm() {
+                let valid = true;
+                const studentId = $("#studentId").val();
+                const fullName = $("#fullName").val();
+                const email = $("#email").val();
+                const idPattern = /^\d{9}$/;
+                const namePattern = /(^[A-Z]{1}[a-z]+)(\s[A-Z]{1}[a-z]*)+$/;
+                const emailPattern = /^[a-zA-Z0-9_.+-]+@[a-zA0-9-]+\/[a-zA-Z0-9-.]+$/;
+                if (!idPattern.test(studentId)) {
+                    $("#studentIdError").text("Mã sinh viên phải có 9 chữ số.");
+                    valid = false;
+                } else {
+                    $("#studentIdError").text("");
+                }
+                if (!namePattern.test(fullName)) {
+                    $("#fullNameError").text("Họ tên phải viết hoa mỗi chữ cái đầu.");
+                    valid = false;
+                } else {
+                    $("#fullNameError").text("");
+                }
+                return valid;
+            }
+
+            function calculateTotalCost() {
+                const serviceCost = parseFloat($("#serviceCost").val());
+                $("#txtDV").val(serviceCost);
+                let equipmentCost = 0;
+                $(".equipment:checked").each(function() {
+                    equipmentCost += parseFloat($(this).val());
+
+                });
+                $("#txtDD").val(equipmentCost);
+                $("#totalCost").val(serviceCost + equipmentCost);
+            }
+            $("#serviceCost, .equipment").change(calculateTotalCost);
+            $("#btnSubmit").click(function() {
+                if (validateForm()) {
+                    const newRow = `<tr>
+                        <td>${$("#studentTable tbody tr").length + 1}</td>
+                        <td>${$("#studentId").val()}</td>
+                        <td>${$("#fullName").val()}</td>
+                        <td>${$("#email").val()}</td>
+                        <td>${$("#txtDV").val()}</td>
+                        <td>${$("#txtDD").val()}</td>
+                        <td>${$("#totalCost").val()}</td>
+                    </tr>`;
+                    $("#studentTable tbody").append(newRow);
+                    $("#myModal").modal("hide");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
