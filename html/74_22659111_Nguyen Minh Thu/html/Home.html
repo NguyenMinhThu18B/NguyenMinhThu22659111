@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link rel="stylesheet" href="../bootstrap-5.2.3-dist/css/bootstrap.min.css">
+    <script src="../bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+    <script src="../bootstrap-5.2.3-dist/js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/Footer.css">
+    <link rel="stylesheet" href="..//css/nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <!--menu  -->
+    <div class="header" id="navbar">
+        <div class="row align-items-center">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-sm bg-light navbar-light">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="Home.html" style="width: 25%;"><img src="../img/LOGOBT.png" alt="" style="width: 70%;padding-left: 50px;"></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                            <ul class="navbar-nav">
+                                <li class="nav-item active">
+                                    <a class="nav-link text-black" href="#">Trang chủ</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-black" href="../html/SanPham.html">Sản phẩm</a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link text-black" href="../html/GioiThieu.html ">Giới
+                                        Thiệu</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-black" href="..//html/Sitemap.html">Sitemap</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-black" href="..//html/Tintuc.html">Tin Tức</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 200px;">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                        <div class="cart" style="font-size: 15px; padding-left: 20px; color: black;">
+                            <a href="#">
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="Nhấn vào để xem giỏ hàng" class="link-dark">
+                                    <!-- <span class="num-cart">0</span> -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-cart-fill cart-icon" viewBox="0 0 16 16">
+                                        <path
+                                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+                                    </svg></a>
+                            </a>
+                        </div>
+                        <a href="DangNhap.html"> <button style="font-size:24px" class="btn"> <img
+                                    src="..//img/Screenshot 2024-04-04 102120.png" alt=""
+                                    style="margin-right: 40px"></button></a>
+                    </div>
+                </nav>
+
+            </div>
+        </div>
+        <div class="row">
+            <div style="background-image: linear-gradient(rgb(255, 255, 255) ,rgb(149, 148, 148));height: 8px;"></div>
+        </div>
+    </div>
+
+
+    <!--end menu  -->
+    <div class="container">
+        <!-- img -->
+
+        <div class="row" style="margin-top: 100px;">
+
+            <div id="demo" class="carousel slide col-12" data-bs-ride="carousel">
+
+                <!-- Indicators/dots -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                </div>
+
+                <!-- The slideshow/carousel -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../img/trangchu/header1.jpg" alt="sp1" class="d-block w-100" style="height:100%;">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/trangchu/header2.jpg" alt="sp2" class="d-block w-100" style="height: 100%;">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/trangchu/header3.jpg" alt="sp3" class="d-block w-100" style="height: 100%;">
+                    </div>
+                </div>
+
+                <!-- Left and right controls/icons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+        <!-- img -->
+        <!-- thuong hieu -->
+        <div class="row" style="margin-top: 10px;">
+            <h2 style="text-align: center;" class="text-bg-light"><b>Thương hiệu</b></h2>
+            <div class="col-2  d-flex align-items-center justify-content-center">
+                <div class="thuonghieu">
+                    <img src="../img/thuonghieu/th1.jpg" alt="" class="img-fluid ">
+                </div>
+            </div>
+            <div class="col-2 d-flex align-items-center justify-content-center">
+                <div class="thuonghieu">
+                    <img src="../img/thuonghieu/th2.png" alt="" class="img-fluid ">
+                </div>
+            </div>
+            <div class="col-2 d-flex align-items-center justify-content-center ">
+                <div class="thuonghieu">
+                    <img src="../img/thuonghieu/th3.jpg" alt="" class="img-fluid ">
+                </div>
+            </div>
+
+            <div class="col-2 d-flex align-items-center justify-content-center">
+                <div class="thuonghieu">
+                    <img src="../img/thuonghieu/th4.png" alt="" class="img-fluid ">
+                </div>
+            </div>
+            <div class="col-2 d-flex align-items-center justify-content-center">
+                <div class="thuonghieu">
+                    <img src="../img/thuonghieu/th5.jpg" alt="" class="img-fluid ">
+                </div>
+            </div>
+            <div class="col-2 d-flex align-items-center justify-content-center">
+                <div class="thuonghieu">
+                    <img src="../img/thuonghieu/th6.jpeg" alt="" class="img-fluid ">
+                </div>
+            </div>
+        </div>
+
+        <!--  -->
+        <!--  -->
+        <div class="row">
+            <br>
+            <hr>
+            <h3 style="text-align: center;" class="text-bg-light"><b>SOCOLA BÁN CHẠY NHẤT</b></h3>
+        </div>
+        <br>
+        <br>
+        <!--nổi bật  -->
+        <div class="row">
+            <div class="col-6">
+                <div class="product-image-container">
+                    <img src="../img/SANPHAM1/SP1.webp" alt="Product Image" class="img-fluid">
+                    <button class="hidden-button btn btn-primary"><a href="SanPham1.html"
+                            style="color: white;text-decoration: none;">Xem sản phẩm</a></button>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="product-image-container">
+                            <img src="../img/SANPHAM2/SP2.webp" alt="Product Image" class="img-fluid">
+                            <button class="hidden-button btn btn-primary"><a href="SanPham2.html"
+                                    style="color: white;text-decoration: none;">Xem sản phẩm</a></button>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="product-image-container">
+                            <img src="../img/SANPHAM3/SP3.webp" alt="Product Image" class="img-fluid">
+                            <button class="hidden-button btn btn-primary"><a href="SanPham3.html"
+                                    style="color: white;text-decoration: none;">Xem sản phẩm</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 35px;">
+                    <div class="col-6">
+                        <div class="product-image-container">
+                            <img src="../img/SANPHAM4/sp4.1.webp" alt="Product Image" class="img-fluid">
+                            <button class="hidden-button btn btn-primary"><a href="SanPham4.html"
+                                    style="color: white;text-decoration: none;">Xem sản phẩm</a></button>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="product-image-container">
+                            <img src="../img/SANPHAM5/SP5.webp" alt="Product Image" class="img-fluid">
+                            <button class="hidden-button btn btn-primary"><a href="SanPham5.html"
+                                    style="color: white;text-decoration: none;">Xem sản phẩm</a></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <!--  -->
+        <br>
+        <!--  -->
+        <div class="text-center" style="margin-left: 10%;margin-right: 10%;margin-top: 5%;">
+            <h2>Socola Hershey's vuông hơi đắng</h2>
+            <p><b>Trọng lượng bịch: 289 gam, có 34 Viên socola với hương vị đắng, mỗi viên 9 gam</b></p>
+            <p style="font-size: 12px;">Hershey Company là nhà máy sản xuất Socola nổi tiếng và lớn nhất thế giới từ năm 1905 tại Pennsylvania của Mỹ, cho đến nay có trên 80 sản phẩm về kẹo Socola. Trong đó có các sản phẩm nổi tiếng như: Hershey's, Reese's, Hershey's Kisses, Kit
+                Kat,.v.v… Chúng tôi đã nhập trực tiếp các mặt hàng này từ Mỹ để phục vụ Quý khách.</p>
+        </div>
+
+
+        <div class="row">
+            <div class="col-4 mt-3">
+                <div class="picture">
+                    <img src="..//img/SANPHAM7/sp7.1.jpeg" alt="" class="img-fluid">
+                    <div class="text-center" style="margin-left: 10%;margin-right: 10%;margin-top: 5%;">
+                        <h6><b>HƯƠNG VỊ</b></h6>
+                        <p style="font-size: 10px;">Socola Hershey's vuông hơi đắng 289g được gói bằng lớp giấy vàng 1 sọc đỏ đặt biệt không dính hình vuông sọc đỏ, hương vị socola đen đặc biệt, thích hợp cho người lớn thích ăn đắng</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4 mt-3">
+                <div class="picture">
+                    <img src="..//img/SANPHAM7/sp7.2.jpeg" alt="" class="img-fluid">
+                    <div class="text-center" style="margin-left: 10%;margin-right: 10%;margin-top: 5%;">
+                        <h6><b>NGUYÊN LIỆU</b></h6>
+                        <p style="font-size: 10px;">Socola được làm từ những hạt cacao chất lượng, có vị ngọt đắng dễ chịu. Kẹo không chỉ cung cấp năng lượng mà còn một số vitamin cần thiết cho cơ thể. Hương thơm bay hơn 2 tháng sau khi khui bịch socola.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4 mt-3">
+                <div class="picture">
+                    <img src="..//img/SANPHAM7/sp7.3.jpg" alt="" class="img-fluid">
+                    <div class="text-center" style="margin-left: 10%;margin-right: 10%;margin-top: 5%;">
+                        <h6><b>CÔNG DỤNG</b></h6>
+                        <p style="font-size: 10px;">Socola tốt cho sức khỏe tim mạch Đã có nhiều nghiên cứu chứng minh rằng Socola có thể giúp trái tim khỏe mạnh hơn. Cụ thể nếu ăn Socola đen mỗi ngày cũng có thể giúp giảm đến 20% nguy cơ đột quỵ. Socola giữ cho bào thai khỏe mạnh
+                            Các nhà nghiên cứu Phần Lan cho rằng với phụ nữ mang thai, những người ăn socola sẽ có tâm trạng thoải mái, vui vẻ, giảm được mức độ căng thẳng hơn. Sự vui vẻ, hạnh phúc của người mẹ có thể góp phần làm thai nhi trong bụng
+                            mẹ phát triển lành mạnh hơn.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <a href="..//html/SanPham7.html" class="text-black">Xem sản phẩm</a>
+            </div>
+        </div>
+
+
+        <div class="text-center" style="margin-left: 10%;margin-right: 10%;margin-top: 5%;">
+            <h2>Socola Milk Godiva Masterpieces 422g</h2>
+            <p><b>Trọng lượng hộp: 422 gam, Với 3 hương vị ngon nhất của Godiva</b></p>
+            <p style="font-size: 12px;">Godiva với thông điệp không chỉ là sự lựa chọn về thẩm mỹ, ý nghĩa tinh tế, mà còn là lời hứa hẹn về chất lượng.</p>
+            <p>Kế thừa nền di sản văn hoá Belgium (Bỉ) từ năm 1926, GODIVA là thương hiệu dẫn đầu cả thế giới về chocolate thượng hạng. Được truyền cảm hứng từ những giá trị tinh tuý nhất của Quý bà Godiva – niềm đam mê, lòng quảng đại, và tinh thần tiên
+                phong của bà - tên gọi huyền thoại GODIVA đã trở thành biểu tượng của dòng chocolate sang trọng, chất lượng, mang hương vị tuyệt mỹ bậc nhất.</p>
+        </div>
+
+
+        <div class="row">
+            <div class="col-4 mt-3">
+                <div class="picture">
+                    <img src="..//img/SANPHAM8/sp8.1.jpeg" alt="" class="img-fluid">
+                    <div class="text-center" style="margin-left: 5%;margin-right: 5%;margin-top: 5%;">
+                        <h6><b>HƯƠNG VỊ</b></h6>
+                        <p style="font-size: 10px;"> Socola Sữa Bliss với lớp nhân Chocolate đen mượt, Socola sữa Caramel Lion của Bỉ với lớp nhân mịn màng Socola sữa Hazenut Oyster với lớp kem praline hạt dẻ.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4 mt-3">
+                <div class="picture">
+                    <img src="..//img/SANPHAM8/sp8.2.jpeg" alt="" class="img-fluid" style="border-radius: 10px;">
+                    <div class="text-center" style="margin-left: 5%;margin-right: 5%;margin-top: 5%;">
+                        <h6><b>LỢI ÍCH</b></h6>
+                        <p style="font-size: 10px;">Socola đen tốt cho tim mạch, Giảm nguy cơ đột quỵ. Giảm lượng cholesterol xấu, tăng nồng độ cholesterol tốt. Làm đẹp da. Cải thiện trí nhớ. Ngăn ngừa bệnh tiểu đường. Đặc biệt, một nghiên cứu tại Phần Lan chỉ ra rằng phụ nữ mang
+                            thai ăn chocolate sẽ giúp giảm căng thẳng, đứa trẻ sinh ra sẽ hạnh phúc và cười nhiều hơn.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4 mt-3">
+                <div class="picture">
+                    <img src="..//img/SANPHAM8/sp8.3.jpeg" alt="" class="img-fluid">
+                    <div class="text-center" style="margin-left: 5%;margin-right: 5%;margin-top: 5%;">
+                        <h6><b>Tại sao kẹo Socola  Mỹ lại được ưu chuộng?</b></h6>
+                        <p style="font-size: 10px;">Kẹo chất lượng cao, bổ sung nhiều chất dinh dưỡng cần thiết cho cơ thể. Mang lại nhiều tác dụng có lợi cho sức khỏe. Được làm từ những thành phần tự nhiên, tốt cho sức khỏe. Được sản xuất với công nghệ tiên tiến, hiện đại hàng
+                            đầu thế giới, đảm bảo an toàn thực phẩm. Bao bì được thiết kế sang trọng, tiện lợi, bắt mắt. Khẳng định được thương hiệu, độ hiệu quả, được triệu triệu khách hàng trên toàn thế giới lựa chọn sử dụng.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <a href="..//html/SanPham8.html" class="text-black">Xem sản phẩm</a>
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <br>
+        <div class="row" style="text-align: center; ">
+            <div class="col-4">
+                <img src="..//img/home1.webp" alt="" width="200%" style="padding-right: 350px;">
+                <p><b>Giao hàng miễn phí</b></p>
+                <p>Áp dụng cho hóa đơn trên 500.000 VNĐ</p>
+            </div>
+
+            <div class="col-4">
+                <img src="..//img/home2.webp" alt="" width="200%" style="padding-right: 350px;">
+                <p><b>Thỏa thích mua sắm</b></p>
+                <p>Tích điểm khi mua sản phẩm yêu thích</p>
+            </div>
+            <div class="col-4">
+                <img src="..//img/home4.webp" alt="" width="200%" style="padding-right: 350px;">
+                <p><b>Dịch vụ đổi trả</b></p>
+                <p>Áp dụng cho tất cả sản phẩm đến tay khách hàng bị hỏng sẽ được đổi trả </p>
+            </div>
+        </div>
+        <br>
+
+    </div>
+    <div class="footer">
+
+        <div class="contain">
+            <div class="information">
+                <h2>Theo dõi chúng tôi trên</h2>
+                <ul>
+                    <li>
+                        <a href="">
+                            <i class="fa-brands fa-facebook"></i>
+                            <span>Facebook</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-brands fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-brands fa-twitter"></i>
+                            <span>Twitter</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-brands fa-youtube"></i>
+                            <span>Youtube</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="information">
+                <h2>Hỗ trợ khách hàng</h2>
+                <ul>
+                    <li>
+                        <a href="">
+                            <span>Chăm sóc khách hàng</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>Thanh toán</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>Hướng dẫn mua hàng</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="information">
+                <h2>Chính sách</h2>
+                <ul>
+                    <li>
+                        <a href="">
+                            <span>Chế độ bảo hành</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>Chính sách đổi hàng</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>Bảo mật thông tin</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>Chính sách giao nhận</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="map">
+                <div class="map-link">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.9587455795904!2d106.66908947480549!3d10.81446908933663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175291f36bb7c35%3A0x9fd596c5a56df33a!2zNTQgxJAuIELhuqFjaCDEkOG6sW5nLCBLaHUgcGjhu5EgOCwgVMOibiBCw6xuaCwgSOG7kyBDaMOtIE1pbmggNzM2NDY0LCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1731491232547!5m2!1svi!2s"
+                        width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></>" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="contact">
+                    <p>
+                        Địa chỉ: 54 Bạch Đằng, Tân Bình, Thành phố Hồ Chí Minh, Việt Nam. <br> <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>© Bản quyền thuộc về <span>Minh Thư</span> 2024</p>
+        </div>
+</body>
+
+</html>
