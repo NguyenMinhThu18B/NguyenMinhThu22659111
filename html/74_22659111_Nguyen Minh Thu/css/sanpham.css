@@ -1,0 +1,116 @@
+.header {
+    /* Các thuộc tính khác của header */
+    margin-bottom: 120px;
+    /* Đặt margin-bottom cho header */
+}
+
+.footer {
+    /* Các thuộc tính khác của footer */
+    margin-top: 120px;
+    /* Đặt margin-top cho footer */
+}
+
+.container {
+    /* Các thuộc tính khác của container */
+    padding-top: 120px;
+    /* Đặt padding-top cho container */
+    padding-bottom: 120px;
+    /* Đặt padding-bottom cho container */
+    width: 100%;
+}
+
+.product-heading {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 120px;
+
+}
+
+.product-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-link {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.image__main {
+    transition: transform 0.3s ease;
+}
+
+.image__main:hover {
+    transform: scale(1.1);
+}
+
+.btn-change-image {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+.btn-change-image img {
+    width: 50%;
+    opacity: 0.5;
+    /* Điều chỉnh độ mờ của ảnh */
+    transition: opacity 0.3s ease;
+}
+
+.btn-change-image:hover img {
+    opacity: 1;
+    /* Khi hover, ảnh sẽ hiển thị đầy đủ */
+}
+
+/* Thêm lớp mới để xác định kích thước của mỗi nút */
+.btn-change-image-container {
+    padding: 10px;
+}
+
+.color-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    /* Khoảng cách giữa các hình tròn */
+    cursor: pointer;
+    /* Đổi con trỏ chuột thành dấu hiệu chọn */
+}
+
+.black {
+    background-color: #000;
+}
+
+.magenta {
+    background-color: #e3e0e6;
+}
+
+.selected {
+    border: 2px solid red;
+    /* Hiển thị border khi được chọn */
+}
+
+.khuyenmai_box {
+    position: relative;
+    border: 10px solid red;
+    padding-top: 50px;
+    border-radius: 10px;
+}
+
+.khuyenmai_box::before {
+    display: table;
+    content: "Ưu đãi";
+    position: absolute;
+    width: 130px;
+    height: 40px;
+    background-color: red;
+    color: #fff;
+    font-size: 40px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 800;
+    top: -5%;
+    right: 40%;
+}

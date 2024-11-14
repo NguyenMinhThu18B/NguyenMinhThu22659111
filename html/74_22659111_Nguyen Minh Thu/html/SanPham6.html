@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socola Nhân Dừa Hạnh Nhân Của Mỹ</title>
+    <link rel="stylesheet" href="../bootstrap-5.2.3-dist/css/bootstrap.min.css">
+    <script src="../bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+    <script src="../bootstrap-5.2.3-dist/js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/Footer.css">
+    <link rel="stylesheet" href="..//css/nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="..//js/ktrasp.js"></script>
+    <link rel="stylesheet" href="..//css/sanpham.css">
+    <script>
+        $(document).ready(function() {
+            var soluongsp = 1;
+            $("#sl").prop("readonly", false).val(soluongsp);
+            $("#gt").prop("readonly", false).val("415000");
+            $("#soluong").change(function() {
+                // Lấy giá trị mới của phần tử input
+                var newValue = $(this).val();
+                soluongsp = newValue;
+                soluongsp1 = Number(soluongsp);
+                giatien = soluongsp1 * 415000;
+                $("#sl").prop("readonly", false).val(soluongsp);
+                $("#gt").prop("readonly", false).val(giatien);
+                // Hiển thị giá trị mới trong console (hoặc bạn có thể thực hiện các hành động khác ở đây)
+            });
+        });
+    </script>
+
+    <body>
+        <div class="header" id="navbar">
+            <div class="row align-items-center">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-sm bg-light navbar-light">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="Home.html" style="width: 25%;"><img src="../img/LOGOBT.png" alt="" style="width: 70%;padding-left: 50px;"></a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="../html/Home.html">Trang chủ</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="../html/SanPham.html">Sản phẩm</a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a class="nav-link text-black" href="../html/GioiThieu.html ">Giới
+                                        Thiệu</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-black" href="..//html/Sitemap.html">Sitemap</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-black" href="..//html/Tintuc.html">Tin Tức</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <form class="d-flex">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 200px;">
+                                <button class="btn btn-outline-success" type="submit">Search</button>
+                            </form>
+                            <button style="font-size:24px" class="btn"> <i class="fa fa-shopping-cart"></i></button>
+                            <a href="DangNhap.html"> <button style="font-size:24px" class="btn"> <img
+                                    src="..//img/Screenshot 2024-04-04 102120.png" alt=""
+                                    style="margin-right: 40px"></button></a>
+                        </div>
+                    </nav>
+
+                </div>
+            </div>
+            <div class="row">
+                <div style="background-image: linear-gradient(rgb(255, 255, 255) ,rgb(149, 148, 148));height: 8px;"></div>
+            </div>
+        </div>
+
+
+        <!-- Sản phẩm -->
+        <div class="container">
+            <h1 class="product-heading">Chi Tiết Sản Phẩm</h1>
+            <div class="row mt-8">
+                <div class="col-md-4">
+                    <div class="product-image">
+                        <!-- Thay đổi ảnh khi click vào nút -->
+                        <div class="image-container">
+                            <img src="../img/SANPHAM6/SP6.jpeg" alt="Product Image" class="img-fluid image__main" data-desktop-src="../img/SANPHAM6/SP6.jpeg" data-mobile-src="../img/SANPHAM6/SP6.jpeg" data-comp-name="image">
+                        </div>
+                        <br>
+                        <!-- Nút chuyển ảnh -->
+                        <div class="row image-buttons">
+                            <div class="col-4 btn-change-image-container">
+                                <button class="btn btn-change-image" data-src="../img/SANPHAM6/sp6.1.jpeg">
+                                <img src="../img/SANPHAM6/sp6.1.jpeg" alt="Image 1">
+                            </button>
+                            </div>
+                            <div class="col-4 btn-change-image-container">
+                                <button class="btn btn-change-image" data-src="../img/SANPHAM6/sp6.2.jpeg">
+                                <img src="../img/SANPHAM6/sp6.2.jpeg" alt="Image 2">
+                            </button>
+                            </div>
+                            <div class="col-4 btn-change-image-container">
+                                <button class="btn btn-change-image" data-src="../img/SANPHAM6/sp6.3.jpeg">
+                                <img src="../img/SANPHAM6/sp6.3.jpeg" alt="Image 3">
+                            </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-details">
+
+                        <!-- Thêm thông tin chi tiết sản phẩm vào đây -->
+                        <h3><strong>Socola Nhân Dừa Hạnh Nhân Của Mỹ</strong></h3>
+                        <br>
+                        <p>Mã Sản Phẩm : 03400014063-1</p>
+                        <p>Thông tin chi tiết: Trọng lượng bịch: 569 gam, có Rất nhiều thanh Socola màu xanh nhân Dừa hạnh nhân. </p>
+                        <p>Địa chỉ sản xuất: Shop Socola Mỹ</p>
+                        <p><strong>Đánh Giá Chi Tiết Sản Phẩm</strong></p>
+                        <div class="rating">
+                            <span class="star" data-value="1">&#9733;</span>
+                            <span class="star" data-value="2">&#9733;</span>
+                            <span class="star" data-value="3">&#9733;</span>
+                            <span class="star" data-value="4">&#9733;</span>
+                            <span class="star" data-value="5">&#9733;</span>
+                        </div>
+                        <br>
+                        <p class="product-status in-stock"><strong>Tình Trạng : Còn Hàng</strong></p>
+                        <!-- Thêm thông tin chi tiết khác nếu cần -->
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-quantity">
+                        <h1></h1>
+                        <h3 style="color: red;"><strong>Giá: 415.000 VNĐ</strong></h3>
+                        <br>
+                        <p>Số Lượng:</p>
+                        <input type="number" value="1" min="1" max="10" id="soluong">
+                        <br>
+                        <br>
+
+
+                        <br>
+                        <br>
+                        <button class="btn btn-primary" style="margin-right: 10px;">Thêm vào giỏ hàng</button>
+                        <button class="btn btn-primary" style="background-color: red;" data-bs-toggle="modal" data-bs-target="#modalId">Đặt Hàng</button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        </div>
+        <div class="footer">
+
+            <div class="contain">
+                <div class="information">
+                    <h2>Theo dõi chúng tôi trên</h2>
+                    <ul>
+                        <li>
+                            <a href="">
+                                <i class="fa-brands fa-facebook"></i>
+                                <span>Facebook</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-brands fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-brands fa-twitter"></i>
+                                <span>Twitter</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-brands fa-youtube"></i>
+                                <span>Youtube</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="information">
+                    <h2>Hỗ trợ khách hàng</h2>
+                    <ul>
+                        <li>
+                            <a href="">
+                                <span>Chăm sóc khách hàng</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span>Thanh toán</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span>Hướng dẫn mua hàng</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="information">
+                    <h2>Chính sách</h2>
+                    <ul>
+                        <li>
+                            <a href="">
+                                <span>Chế độ bảo hành</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span>Chính sách đổi hàng</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span>Bảo mật thông tin</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span>Chính sách giao nhận</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="map">
+                    <div class="map-link">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.9587455795904!2d106.66908947480549!3d10.81446908933663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175291f36bb7c35%3A0x9fd596c5a56df33a!2zNTQgxJAuIELhuqFjaCDEkOG6sW5nLCBLaHUgcGjhu5EgOCwgVMOibiBCw6xuaCwgSOG7kyBDaMOtIE1pbmggNzM2NDY0LCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1731491232547!5m2!1svi!2s"
+                            width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></>" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="contact">
+                        <p>
+                            Địa chỉ: 54 Bạch Đằng, Tân Bình, Thành phố Hồ Chí Minh, Việt Nam. <br> <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>© Bản quyền thuộc về <span>Minh Thư</span> 2024</p>
+            </div>
+            <!-- Modal Body -->
+            <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+            <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-header" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalTitleId">
+                                Thông tin đặt hàng
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="form-group">
+                                    <div id="thongbao" class="text-danger" style="text-align: center;"></div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label for="txtHoten" class="control-label col-4">Họ và tên</label>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" id="txtHoten" placeholder="">
+                                            <span id="tbMa" class="text-danger">*</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label for="txtSdt" class="control-label col-4">Số điện thoại</label>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" id="txtSdt" placeholder="">
+                                            <span id="tbSDT" class="text-danger">*</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label for="txtNgay" class="control-label col-4">Ngày sinh</label>
+                                        <div class="col-md-8">
+                                            <input type="date" class="form-control" id="txtNgay">
+                                            <span id="tbNgay" class="text-danger">*</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label for="txtDc" class="control-label col-4">Địa chỉ</label>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" id="txtDc" placeholder="">
+                                            <span id="tbDc" class="text-danger">*</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label for="khoa" class="control-label col-4">Số lượng</label>
+                                        <div class="col-md-8">
+                                            <input type="text" name="" id="sl" disabled>
+                                            <br>
+                                            <span class="text-danger">*</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label for="bt" class="control-label col-4">Giá tiền</label>
+                                        <div class="col-md-8">
+                                            <input type="text" class="bt" id="gt" disabled>
+                                            <br><span class="text-danger">*</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            Close
+                        </button>
+                            <button type="button" class="btn btn-primary" id="btndathang">Đặt hàng</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Optional: Place to the bottom of scripts -->
+            <script>
+                const myModal = new bootstrap.Modal(
+                    document.getElementById("modalId"),
+                    options,
+                );
+            </script>
+    </body>
+
+</html>
